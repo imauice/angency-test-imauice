@@ -1,0 +1,20 @@
+.row:hover{
+    cursor: pointer;
+   background-color: aquamarine;
+}
+.row:focus{
+    background-color: rgba($color: #fde7fa, $alpha: 1.0)
+}
+
+table{
+    th{
+        font-size: larger;
+        font-size:larger;
+        text-align: center;
+        background-color: aquamarine;
+    }
+    td{
+        padding: 10px 30px 10px 30px;
+    }
+}
+

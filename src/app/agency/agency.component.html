@@ -1,0 +1,42 @@
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource">
+  
+      <!-- Position Column -->
+      <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef> Title </th>
+        <td mat-cell *matCellDef="let element"> {{element.attributes?.title}} </td>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="website">
+        <th mat-header-cell *matHeaderCellDef> Website </th>
+        <td mat-cell *matCellDef="let element"> {{element.attributes.website?.uri}} </td>
+      </ng-container>
+  
+      <!-- Weight Column -->
+      <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef> Address </th>
+        <td mat-cell *matCellDef="let element">
+             {{element.attributes.submission_address?.address_line1}} 
+             {{element.attributes.submission_address?.address_line2}} 
+             {{element.attributes.submission_address?.locality}} 
+             {{element.attributes.submission_address?.administrative_area}} 
+             {{element.attributes.submission_address?.postal_code}} 
+             {{element.attributes.submission_address?.country_code}}
+            </td>
+      </ng-container>
+  
+    
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+ 
+       <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="'agency/' + row.id" class="row" (click)="getDetail(row,row.links.self.href)"></tr> 
+     
+      
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[10, 15, 20, 50]"
+                   showFirstLastButtons 
+                   aria-label="Select page of periodic elements">
+    </mat-paginator>
+  </div>
