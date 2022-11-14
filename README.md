@@ -1,3 +1,32 @@
+# Short answers
+
+1. Describe the pros and cons of a few methods of communication between Angular components.
+    - with qurery parameter
+    - with  @Input() @Output() decorator
+    - with route parameter => const routeParams = this.route.snapshot.paramMap;
+
+2. Describe 3 things you dislike about Angular.
+    - javacript problem in angular.json
+    - angular material may easy to use more than current version
+    - it's may very good with seo support
+
+3. If there are any items that you did not complete, please list them out.
+    - i think it's has done
+
+4. If you had 40 hours to work on this project, please describe all the improvements you would incorporate.
+    - i may improve css style
+
+thank you verymuch 
+wachirut chaiwong (imauice)
+
+############################################################################################################
+############################################################################################################
+
+
+
+
+
+
 # Test
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.0.
